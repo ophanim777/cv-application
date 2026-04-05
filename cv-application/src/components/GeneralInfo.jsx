@@ -8,3 +8,16 @@ export default function GeneralInfo({ data, setData }){
     setData({ ...data, [name]: value });
 }
 }
+
+ return (
+    <div>
+      <h2>General Info</h2>
+
+      {isEditing ? (
+        <>
+          <input name="name" placeholder="Name" onChange={handleChange} />
+          <input name="email" placeholder="Email" onChange={handleChange} />
+          <input name="phone" placeholder="Phone" onChange={handleChange} />
+          <button onClick={() => setIsEditing(false)}>Submit</button>
+        </>
+      )
