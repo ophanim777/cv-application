@@ -7,7 +7,6 @@ export default function GeneralInfo({ data, setData }){
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
 }
-}
 
  return (
     <div>
@@ -20,4 +19,14 @@ export default function GeneralInfo({ data, setData }){
           <input name="phone" placeholder="Phone" onChange={handleChange} />
           <button onClick={() => setIsEditing(false)}>Submit</button>
         </>
-      )
+      ) : (
+        <>
+          <p>{data.school}</p>
+          <p>{data.study}</p>
+          <p>{data.date}</p>
+          <button onClick={() => setIsEditing(true)}>Edit</button>
+        </>
+      )}
+    </div>
+  );
+}
