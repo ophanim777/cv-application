@@ -23,4 +23,16 @@ export default function Experience({ data, setData }) {
         </>
       )
 
+
+      : (
+        <>
+          <p>{data.company}</p>
+          <p>{data.position}</p>
+          <p>{data.responsibility}</p>
+          <p>{data.date}</p>
+          <button onClick={() => setIsEditing(true)}>Edit</button>
+        </>
+      )}
+    </div>
+  );
 }
