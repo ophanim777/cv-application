@@ -9,6 +9,18 @@ export default function Experience({ data, setData }) {
   }
 
 
+  return (
+    <div>
+      <h2>Experience</h2>
 
-  
+      {isEditing ? (
+        <>
+          <input name="company" placeholder="Company" onChange={handleChange} />
+          <input name="position" placeholder="Position" onChange={handleChange} />
+          <input name="responsibility" placeholder="Responsibilities" onChange={handleChange} />
+          <input name="date" placeholder="Date" onChange={handleChange} />
+          <button onClick={() => setIsEditing(false)}>Submit</button>
+        </>
+      )
+
 }
